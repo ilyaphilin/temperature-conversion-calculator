@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/temperature-conversion-calculator/static/css/main.4a2033a7.css",
+    "main.js": "/temperature-conversion-calculator/static/js/main.0b760ee6.js",
+    "static/js/787.a86f3764.chunk.js": "/temperature-conversion-calculator/static/js/787.a86f3764.chunk.js",
+    "index.html": "/temperature-conversion-calculator/index.html",
+    "main.4a2033a7.css.map": "/temperature-conversion-calculator/static/css/main.4a2033a7.css.map",
+    "main.0b760ee6.js.map": "/temperature-conversion-calculator/static/js/main.0b760ee6.js.map",
+    "787.a86f3764.chunk.js.map": "/temperature-conversion-calculator/static/js/787.a86f3764.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a2033a7.css",
+    "static/js/main.0b760ee6.js"
+  ]
+}
