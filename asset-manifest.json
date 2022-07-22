@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/temperature-conversion-calculator/static/css/main.e27a022d.css",
-    "main.js": "/temperature-conversion-calculator/static/js/main.ac8d993f.js",
+    "main.css": "/temperature-conversion-calculator/static/css/main.46ab505a.css",
+    "main.js": "/temperature-conversion-calculator/static/js/main.6ad6688e.js",
     "static/js/787.a86f3764.chunk.js": "/temperature-conversion-calculator/static/js/787.a86f3764.chunk.js",
     "index.html": "/temperature-conversion-calculator/index.html",
-    "main.e27a022d.css.map": "/temperature-conversion-calculator/static/css/main.e27a022d.css.map",
-    "main.ac8d993f.js.map": "/temperature-conversion-calculator/static/js/main.ac8d993f.js.map",
+    "main.46ab505a.css.map": "/temperature-conversion-calculator/static/css/main.46ab505a.css.map",
+    "main.6ad6688e.js.map": "/temperature-conversion-calculator/static/js/main.6ad6688e.js.map",
     "787.a86f3764.chunk.js.map": "/temperature-conversion-calculator/static/js/787.a86f3764.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e27a022d.css",
-    "static/js/main.ac8d993f.js"
+    "static/css/main.46ab505a.css",
+    "static/js/main.6ad6688e.js"
   ]
 }
