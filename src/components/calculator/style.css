@@ -74,18 +74,18 @@ button:hover{
         margin-top: 15px;
         margin-bottom: 10px;
     }
-    p{
+    .calculatorParagraph{
         margin-top: 20px;
         font-size: 17px;
     }
-    input{
+    .calculatorInput{
         margin-top: 0;
         width: 100%;
     }
 }
 
 @media screen and (max-width: 340px) {
-    p{
+    .calculatorParagraph{
         font-size: 14px;
     }
     .calculatorTitle{
