@@ -4,6 +4,7 @@ import './style.css';
 const TemperatureInput = ({value, scale, onChange}) => {
     return <input
         value={value}
+        placeholder={`Write temperature in ${scale}`}
         onChange={(e) => onChange(e.target.value, scale)}/>
 }
 
@@ -16,40 +17,39 @@ const BoilingVerdict = ({temp}) => {
 }
 
 export default function Calculator() {
-    const [tempC, setTempC] = useState(0);
-    const [tempF, setTempF] = useState(0);
-    const [tempK, setTempK] = useState(0);
-    const [tempR, setTempR] = useState(0);
-
+    const [tempC, setTempC] = useState();
+    const [tempF, setTempF] = useState();
+    const [tempK, setTempK] = useState();
+    const [tempR, setTempR] = useState();
     const handleTempChange = (temp, scale) => {
         if (scale === 'C') {
             setTempC(temp);
-            setTempF((temp * 1.8) + 32);
-            setTempK(+temp + 273.15);
-            setTempR((temp * 1.8) + 491.67);
+            setTempF(((temp * 1.8) + 32).toFixed(2));
+            setTempK((+temp + 273.15).toFixed(2));
+            setTempR(((temp * 1.8) + 491.67).toFixed(2));
         } else if (scale === 'F') {
             setTempF(temp);
-            setTempC((temp - 32) * (5 / 9));
-            setTempK((+temp + 459.67) * 5 / 9);
-            setTempR(+temp + 459.67);
+            setTempC(((temp - 32) * (5 / 9)).toFixed(2));
+            setTempK(((+temp + 459.67) * 5 / 9).toFixed(2));
+            setTempR((+temp + 459.67).toFixed(2));
         } else if (scale === 'K') {
             setTempK(temp);
-            setTempC(temp - 273.15);
-            setTempF((temp - 273.15) * (9 / 5) + 32);
-            setTempR(temp * (9 / 5));
+            setTempC((temp - 273.15).toFixed(2));
+            setTempF(((temp - 273.15) * (9 / 5) + 32).toFixed(2));
+            setTempR((temp * (9 / 5)).toFixed(2));
         } else if (scale === 'R') {
             setTempR(temp);
-            setTempC((temp * (5 / 9)) - 273.15);
-            setTempF(temp - 459.67);
-            setTempK(temp * (5 / 9));
+            setTempC(((temp * (5 / 9)) - 273.15).toFixed(2));
+            setTempF((temp - 459.67).toFixed(2));
+            setTempK((temp * (5 / 9)).toFixed(2));
         }
     }
 
     const ResetButton = () => {
-        setTempC(0);
-        setTempF(0);
-        setTempK(0);
-        setTempR(0);
+        setTempC('');
+        setTempF('');
+        setTempK('');
+        setTempR('');
     }
 
     return (
@@ -59,25 +59,21 @@ export default function Calculator() {
             <TemperatureInput
                 value={tempC}
                 scale='C'
-                placeholder="Write temperature"
                 onChange={handleTempChange}/>
             <p>ENTER TEMPERATURE IN <span className='lightBlue'> 'FAHRENHEIT'</span>:</p>
             <TemperatureInput
                 value={tempF}
                 scale='F'
-                placeholder="Write temperature"
                 onChange={handleTempChange}/>
             <p>ENTER TEMPERATURE IN <span className='darkGreen'> 'KELVIN'</span>:</p>
             <TemperatureInput
                 value={tempK}
                 scale='K'
-                placeholder="Write temperature"
                 onChange={handleTempChange}/>
             <p>ENTER TEMPERATURE IN <span className='green'> 'RANKINE'</span>:</p>
             <TemperatureInput
                 value={tempR}
                 scale='R'
-                placeholder="Write temperature"
                 onChange={handleTempChange}/>
 
             <button onClick={ResetButton}>CLEAR</button>
