@@ -4,6 +4,7 @@ import './style.css';
 const TemperatureInput = ({value, scale, onChange}) => {
     return <input
         value={value}
+        className='calculatorInput'
         placeholder={`Write temperature in ${scale}`}
         onChange={(e) => onChange(e.target.value, scale)}/>
 }
@@ -13,7 +14,7 @@ const BoilingVerdict = ({temp}) => {
     if (temp >= 100) {
         return <p>The water would boil.</p>;
     }
-    return <p>The water would not boil.</p>;
+    return <p className='calculatorParagraph'>The water would not boil.</p>;
 }
 
 export default function Calculator() {
@@ -55,28 +56,27 @@ export default function Calculator() {
     return (
         <div className='wrapper'>
             <h1 className='calculatorTitle'>TEMPERATURE CONVERSION CALCULATOR</h1>
-            <p>ENTER TEMPERATURE IN <span className='blue'> 'CELSIUS'</span>:</p>
+            <p className='calculatorParagraph'>ENTER TEMPERATURE IN <span className='blue'> 'CELSIUS'</span>:</p>
             <TemperatureInput
                 value={tempC}
                 scale='C'
                 onChange={handleTempChange}/>
-            <p>ENTER TEMPERATURE IN <span className='lightBlue'> 'FAHRENHEIT'</span>:</p>
+            <p className='calculatorParagraph'>ENTER TEMPERATURE IN <span className='lightBlue'> 'FAHRENHEIT'</span>:</p>
             <TemperatureInput
                 value={tempF}
                 scale='F'
                 onChange={handleTempChange}/>
-            <p>ENTER TEMPERATURE IN <span className='darkGreen'> 'KELVIN'</span>:</p>
+            <p className='calculatorParagraph'>ENTER TEMPERATURE IN <span className='darkGreen'> 'KELVIN'</span>:</p>
             <TemperatureInput
                 value={tempK}
                 scale='K'
                 onChange={handleTempChange}/>
-            <p>ENTER TEMPERATURE IN <span className='green'> 'RANKINE'</span>:</p>
+            <p className='calculatorParagraph'>ENTER TEMPERATURE IN <span className='green'> 'RANKINE'</span>:</p>
             <TemperatureInput
                 value={tempR}
                 scale='R'
                 onChange={handleTempChange}/>
-
-            <button onClick={ResetButton}>CLEAR</button>
+            <button className='resetButton' onClick={ResetButton}>CLEAR</button>
             <BoilingVerdict temp={tempC}/>
         </div>
     );
