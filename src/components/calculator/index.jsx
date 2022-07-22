@@ -12,7 +12,7 @@ const TemperatureInput = ({value, scale, onChange}) => {
 
 const BoilingVerdict = ({temp}) => {
     if (temp >= 100) {
-        return <p>The water would boil.</p>;
+        return <p className='calculatorParagraph'>The water would boil.</p>;
     }
     return <p className='calculatorParagraph'>The water would not boil.</p>;
 }
